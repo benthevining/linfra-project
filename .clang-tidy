@@ -1,0 +1,73 @@
+# config file for clang-tidy. clang-tidy is run by pre-commit.
+
+Checks: >
+  -*,
+  bugprone-*,
+  cert-*,
+  clang-analyzer-*,
+  concurrency-*,
+  cppcoreguidelines-*,
+  google-build-explicit-make-pair,
+  google-build-namespaces,
+  google-default-arguments,
+  google-explicit-constructor,
+  google-global-names-in-headers,
+  google-readability-casting,
+  google-runtime-int,
+  google-runtime-operator,
+  hicpp-*,
+  llvm-namespace-comment,
+  misc-*,
+  -misc-no-recursion,
+  modernize-*,
+  -modernize-use-trailing-return-type,
+  mpi-buffer-deref,
+  mpi-type-mismatch,
+  objc-*,
+  openmp-use-default-none,
+  performance-*,
+  portability-*,
+  -portability-simd-intrinsics,
+  readability-*,
+  -readability-braces-around-statements,
+  -readability-function-cognitive-complexity,
+  -readability-magic-numbers,
+  -readability-uppercase-literal-suffix
+CheckOptions:
+- key: bugprone-argument-comment.StrictMode
+  value: 1
+- key: bugprone-misplaced-widening-cast.CheckImplicitCasts
+  value: 1
+- key: bugprone-sizeof-expression.WarnOnSizeOfIntegerExpression
+  value: 1
+- key: bugprone-suspicious-enum-usage.StrictMode
+  value: 1
+- key: bugprone-suspicious-string-compare.WarnOnLogicalNotComparison
+  value: 1
+- key: cppcoreguidelines-macro-usage.AllowedRegexp
+  value: ^LFILE_*
+- key: cppcoreguidelines-narrowing-conversions.WarnWithinTemplateInstantiation
+  value: 1
+- key: cppcoreguidelines-narrowing-conversions.PedanticMode
+  value: 1
+- key: cppcoreguidelines-special-member-functions.AllowSoleDefaultDtor
+  value: 1
+- key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic
+  value: 1
+- key: performance-inefficient-string-concatenation.StrictMode
+  value: 1
+- key: readability-function-size.BranchThreshold
+  value: 25
+- key: readability-function-size.ParameterThreshold
+  value: 10
+- key: readability-identifier-length.MinimumLoopCounterNameLength
+  value: 1
+- key: readability-inconsistent-declaration-parameter-name.Strict
+  value: 1
+- key: readability-simplify-boolean-expr.ChainedConditionalReturn
+  value: 1
+- key: readability-simplify-boolean-expr.ChainedConditionalAssignment
+  value: 1
+- key: readability-uniqueptr-delete-release.PreferResetCall
+  value: 1
+FormatStyle: file

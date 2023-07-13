@@ -1,0 +1,33 @@
+version: 2
+
+updates:
+
+- package-ecosystem: npm
+  directory: /
+  schedule:
+    interval: daily
+  commit-message:
+    prefix: chore(deps) [skip ci]
+    include: scope
+  reviewers:
+  - %AUTHOR_GH_USERNAME%
+
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: daily
+  commit-message:
+    prefix: chore(deps) [skip ci]
+    include: scope
+  reviewers:
+  - %AUTHOR_GH_USERNAME%
+
+- package-ecosystem: gitsubmodule
+  directory: /
+  schedule:
+    interval: daily
+  commit-message:
+    prefix: chore(deps) [skip ci]
+    include: scope
+  reviewers:
+  - %AUTHOR_GH_USERNAME%

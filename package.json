@@ -1,0 +1,139 @@
+{
+  "author": {
+    "email": "%AUTHOR_EMAIL%",
+    "name": "%AUTHOR_GIVEN_NAME% %AUTHOR_FAMILY_NAME%"
+  },
+  "dependencies": {
+    "@semantic-release/changelog": "6.0.2",
+    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "conventional-changelog-conventionalcommits": "5.0.0",
+    "semantic-release": "20.1.0"
+  },
+  "description": "%PROJECT_DESCRIPTION%",
+  "homepage": "%PROJECT_URL%",
+  "keywords": [],
+  "license": "GPL3",
+  "name": "%PROJECT_NAME%",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "section": "Bug Fixes",
+                "type": "fix"
+              },
+              {
+                "section": "Features",
+                "type": "feat"
+              },
+              {
+                "hidden": true,
+                "type": "chore"
+              },
+              {
+                "hidden": true,
+                "type": "docs"
+              },
+              {
+                "hidden": true,
+                "type": "style"
+              },
+              {
+                "hidden": true,
+                "type": "refactor"
+              },
+              {
+                "hidden": true,
+                "type": "test"
+              },
+              {
+                "hidden": true,
+                "type": "ci"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "section": "Bug Fixes",
+                "type": "fix"
+              },
+              {
+                "section": "Features",
+                "type": "feat"
+              },
+              {
+                "hidden": true,
+                "type": "chore"
+              },
+              {
+                "hidden": true,
+                "type": "docs"
+              },
+              {
+                "hidden": true,
+                "type": "style"
+              },
+              {
+                "hidden": true,
+                "type": "refactor"
+              },
+              {
+                "hidden": true,
+                "type": "test"
+              },
+              {
+                "hidden": true,
+                "type": "ci"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md",
+          "changelogTitle": "# Changelog"
+        }
+      ],
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "bumpversion --allow-dirty --new-version \"${nextRelease.version}\" patch"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CMakeLists.txt",
+            "package.json",
+            "CITATION.cff"
+          ]
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": []
+        }
+      ]
+    ]
+  },
+  "version": "0.0.1"
+}

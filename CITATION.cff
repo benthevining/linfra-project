@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: %PROJECT_NAME%
+message: If you use this software, please cite it using the metadata from this file.
+type: software
+authors:
+- given-names: %AUTHOR_GIVEN_NAME%
+  family-names: %AUTHOR_FAMILY_NAME%
+  email: %AUTHOR_EMAIL%
+version: 0.0.1
+url: "%PROJECT_URL%"
