@@ -76,7 +76,7 @@ repos:
 
 # Insert license header
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.4.2
+  rev: v1.5.1
   hooks:
     # we have to run this step once for each different comment-style
   - id: insert-license
@@ -167,13 +167,13 @@ repos:
   - id: forbid-bidi-controls
   # Markdown
 - repo: https://github.com/igorshubovych/markdownlint-cli
-  rev: v0.33.0
+  rev: v0.35.0
   hooks:
   - id: markdownlint-fix
     args: [--disable, MD033, MD010, MD013]
     # exclude: CHANGELOG.md
 - repo: https://github.com/codingjoe/relint
-  rev: 3.0.0
+  rev: 3.1.0
   hooks:
   - id: relint
     args: [-c, linfra/config/.relint.yml]
@@ -182,21 +182,21 @@ repos:
 
   # various other formatters
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks.git
-  rev: v2.7.0
+  rev: v2.10.0
   hooks:
   - id: pretty-format-yaml
     args: [--autofix, --preserve-quotes]
 
   # validate JSON/YAML schemas
 - repo: https://github.com/sirosen/check-jsonschema
-  rev: 0.21.0
+  rev: 0.23.3
   hooks:
   - id: check-github-workflows
   - id: check-dependabot
 
 # Git linting
 - repo: https://github.com/jorisroovers/gitlint
-  rev: v0.19.0dev
+  rev: v0.19.1
   hooks:
   - id: gitlint
     args: [--config, linfra/config/.gitlint, --msg-filename]
@@ -209,7 +209,7 @@ repos:
 
 # check editorconfig rules
 - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-  rev: 2.7.1
+  rev: 2.7.2
   hooks:
   - id: editorconfig-checker
     args: [-ignore-defaults, -config, linfra/config/.ecrc]
