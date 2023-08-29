@@ -189,7 +189,7 @@ repos:
 
   # validate JSON/YAML schemas
 - repo: https://github.com/sirosen/check-jsonschema
-  rev: 0.24.1
+  rev: 0.26.3
   hooks:
   - id: check-github-workflows
   - id: check-dependabot
