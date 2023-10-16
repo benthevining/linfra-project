@@ -182,7 +182,7 @@ repos:
 
   # various other formatters
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks.git
-  rev: v2.10.0
+  rev: v2.11.0
   hooks:
   - id: pretty-format-yaml
     args: [--autofix, --preserve-quotes]
@@ -209,7 +209,7 @@ repos:
 
 # check editorconfig rules
 - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-  rev: 2.7.2
+  rev: 2.7.3
   hooks:
   - id: editorconfig-checker
     args: [-ignore-defaults, -config, linfra/config/.ecrc]
