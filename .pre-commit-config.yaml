@@ -76,7 +76,7 @@ repos:
 
 # Insert license header
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.5.5
+  rev: v1.5.6
   hooks:
     # we have to run this step once for each different comment-style
   - id: insert-license
