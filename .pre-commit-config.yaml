@@ -189,7 +189,7 @@ repos:
 
   # validate JSON/YAML schemas
 - repo: https://github.com/sirosen/check-jsonschema
-  rev: 0.37.4
+  rev: 0.38.0
   hooks:
   - id: check-github-workflows
   - id: check-dependabot
@@ -209,7 +209,7 @@ repos:
 
 # check editorconfig rules
 - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-  rev: 3.8.0
+  rev: 3.11.1
   hooks:
   - id: editorconfig-checker
     args: [-ignore-defaults, -config, linfra/config/.ecrc]
