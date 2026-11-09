@@ -101,7 +101,7 @@ repos:
     files: '\.(md|h|doc)$'
 
 - repo: https://github.com/pocc/pre-commit-hooks
-  rev: v1.3.5
+  rev: v1.5.0
   hooks:
 
   - id: clang-format
